@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      padding-top: 60px;
+      background: linear-gradient(135deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: white;
+    }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .card {
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-title, .card-text, .nav-tabs .nav-link {
+      color: #333;
+    }
+
+    .tab-content h2 {
+      color: #fff;
+      margin-top: 20px;
+    }
+
+    .nav-tabs .nav-link.active {
+      background-color: #ffffff;
+      color: #d62976;
+    }
+
+    .nav-tabs .nav-link {
+      color: white;
+      font-weight: bold;
+    }
+
+    ul {
+      color: #fff;
+    }
+
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-img-top.ateneo-events {
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+  <div class="container text-center">
+    <img src="images/profile pic.jpg" alt="Your Photo" class="profile-img mb-3">
+
+    <h1>Lady Samantha Aguirre</h1>
+    <p class="text-light">BS Information Technology</p>
+
+    <div class="mb-4">
+      <a href="https://github.com/samanthaguirre" target="_blank" class="me-3">
+        <img src="https://img.icons8.com/ios-glyphs/30/github.png" alt="GitHub">
+      </a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/30/linkedin.png" alt="LinkedIn">
+      </a>
+    </div>
+
+    
+    <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="education-tab" data-bs-toggle="tab" data-bs-target="#education" type="button" role="tab">Education</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="skills-tab" data-bs-toggle="tab" data-bs-target="#skills" type="button" role="tab">Skills</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="projects-tab" data-bs-toggle="tab" data-bs-target="#projects" type="button" role="tab">Projects</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="research-tab" data-bs-toggle="tab" data-bs-target="#research" type="button" role="tab">Research</button>
+      </li>
+    </ul>
+
+    <div class="tab-content text-start mt-4" id="myTabContent">
+      
+      <div class="tab-pane fade show active" id="education" role="tabpanel">
+        <h2>Education</h2>
+        <ul>
+          <li>2nd year in Bachelor of Science in Information Technology</li>
+        </ul>
+        <h2>Background</h2>
+        <ul>
+          <li>Currently studying at Ateneo de Davao University, focusing on learning how to program.</li>
+        </ul>
+      </div>
+
+      
+      <div class="tab-pane fade" id="skills" role="tabpanel">
+        <h2>Skills</h2>
+        <ul>
+          <li>HTML & CSS</li>
+          <li>Java</li>
+          <li>Python</li>
+          <li>UI/UX Design with Figma</li>
+          <li>Basic MySQL</li>
+        </ul>
+      </div>
+
+      
+      <div class="tab-pane fade" id="projects" role="tabpanel">
+        <h2>Projects</h2>
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <img src="images/quiz.png" class="card-img-top" alt="Time Trail Quiz">
+              <div class="card-body">
+                <h5 class="card-title">Time Trail Quiz</h5>
+                <p class="card-text">A history quiz based on Readings in Philippine History.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <img src="images/Portfolio.png" class="card-img-top" alt="Portfolio Website">
+              <div class="card-body">
+                <h5 class="card-title">Portfolio Website</h5>
+                <p class="card-text">My personal portfolio, made for one of my major subjects.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <img src="images/Website.png" class="card-img-top" alt="ITC Website">
+              <div class="card-body">
+                <h5 class="card-title">ITC Website</h5>
+                <p class="card-text">This is a website I developed during my first year studying IT</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="card project-figma">
+              <img src="images/figma.png" class="card-img-top ateneo-events" alt="Ateneo Events (Figma)">
+              <div class="card-body">
+                <h5 class="card-title">Ateneo Events</h5>
+                <p class="card-text">A UI/UX prototype created in Figma showcasing an events page for Ateneo students.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <img src="images/song.png" class="card-img-top" alt="Favorite Song Webpage">
+              <div class="card-body">
+                <h5 class="card-title">Favorite Song Webpage</h5>
+                <p class="card-text">A creative webpage showcasing my favorite song, styled using custom CSS.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="tab-pane fade" id="research" role="tabpanel">
+        
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
